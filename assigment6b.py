@@ -1,16 +1,15 @@
 def main():
      
-    s = int(0)
-    n = int(0)
-    k = int(input("\nWhat is the number you would like to iterate PI?\nEnter your number here: "))
+    s = (0)
+    n = (0)
+    k = (input("\nWhat is the number you would like to iterate PI?\nEnter your number here: "))
 
-
-
-    for n in range(k):
-        s += (((-1)**n)*4)/(2*n+1)
-    print("\nYour final Iterated PI is:",s)
-
-
+    if k.isnumeric() == True:
+        for n in range(int(k)):
+            s += (((-1)**int(n))*4)/(2*int(n)+1)
+        print("\nYour final Iterated PI is:",s)
+    elif k.isnumeric != True:
+         print("\nYou silly goose, next time please type in a number")
 
     while True:
             r = input("\nWould you like another question or Quit?\nYes or No: ")
@@ -23,6 +22,5 @@ def main():
                 exit()
             
             else:
-                print("\nPlease answer with yes or Quit\n")
-                main()
+                print("\nPlease answer with yes or No")
 main()
